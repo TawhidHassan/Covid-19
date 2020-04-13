@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#213E99</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="white">#fff</color>
+    <color name="rc">#C3AFE8</color>
+
+
+    <color name="yellow">#F4E621</color>
+    <color name="oreng">#FF4C4C</color>
+    <color name="green">#36C12C</color>
+
+
 </resources>
