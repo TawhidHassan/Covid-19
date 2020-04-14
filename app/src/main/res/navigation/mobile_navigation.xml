@@ -22,4 +22,9 @@
         android:name="com.example.covid_19.ui.allcountry.AllCountryFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_all_country" />
+    <fragment
+        android:id="@+id/navigation_check_covid"
+        android:name="com.example.covid_19.ui.CheckCoronaFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_check_corona" />
 </navigation>

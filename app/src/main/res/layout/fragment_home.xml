@@ -26,7 +26,7 @@
             app:layout_constraintTop_toBottomOf="@+id/arcView2" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tvLastUpdated"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lastday 23/22/2020 2:00pm"
@@ -46,7 +46,7 @@
             app:layout_constraintEnd_toEndOf="parent"
 
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3">
+            app:layout_constraintTop_toBottomOf="@+id/tvLastUpdated">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,6 +71,7 @@
                         android:background="@drawable/circle" />
 
                     <TextView
+                        android:id="@+id/tvTotalConfirmed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1010"
@@ -100,6 +101,7 @@
                         android:background="@drawable/circle2" />
 
                     <TextView
+                        android:id="@+id/tvTotalDeaths"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1010"
@@ -130,6 +132,7 @@
                         android:background="@drawable/circle3" />
 
                     <TextView
+                        android:id="@+id/tvTotalRecovered"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1010"
@@ -334,5 +337,17 @@
 
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/progress_circular_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/arcView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.core.widget.NestedScrollView>

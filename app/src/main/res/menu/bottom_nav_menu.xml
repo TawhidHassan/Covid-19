@@ -15,5 +15,9 @@
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/country_selector"
         android:title="@string/title_notifications" />
+    <item
+        android:id="@+id/navigation_check_covid"
+        android:icon="@drawable/ic_local_hospital"
+        android:title="Check Your Virus" />
 
 </menu>
