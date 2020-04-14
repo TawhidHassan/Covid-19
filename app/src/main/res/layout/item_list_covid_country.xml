@@ -34,9 +34,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:fontFamily="@font/paytone_one"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
             android:textSize="20sp"
+            android:textStyle="bold"
             tools:text="China" />
     </LinearLayout>
 </RelativeLayout>

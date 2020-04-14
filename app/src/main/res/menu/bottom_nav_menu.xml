@@ -19,5 +19,9 @@
         android:id="@+id/navigation_check_covid"
         android:icon="@drawable/ic_local_hospital"
         android:title="Check Your Virus" />
+    <item
+        android:id="@+id/navigation_call_center"
+        android:icon="@drawable/ic_call_center"
+        android:title="Help Center" />
 
 </menu>

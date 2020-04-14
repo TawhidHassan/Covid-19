@@ -17,11 +17,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/aladin"
             android:text="Case Update"
             android:textColor="@android:color/black"
             android:textSize="23sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/arcView2" />
 
@@ -74,7 +74,7 @@
                         android:id="@+id/tvTotalConfirmed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1010"
+                        android:text="Please"
                         android:textColor="@color/yellow"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -104,7 +104,7 @@
                         android:id="@+id/tvTotalDeaths"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1010"
+                        android:text="Check"
                         android:textColor="#FF4848"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -135,7 +135,7 @@
                         android:id="@+id/tvTotalRecovered"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1010"
+                        android:text="Internet"
                         android:textColor="#36C12C"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -183,6 +183,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/paytone_one"
                         android:text="All You need \n Is Stay At Home"
                         android:textAlignment="center"
                         android:textColor="@color/white"
@@ -193,16 +194,17 @@
         </com.github.florent37.shapeofview.shapes.ArcView>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/caseSeeDeatilsId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="See details"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginLeft="4dp"
             android:layout_marginRight="8dp"
+            android:text="See details"
+            android:background="@drawable/corner_radious"
+            android:backgroundTint="@color/green"
+            android:padding="8dp"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/textView" />
 
         <TextView
@@ -210,6 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/aladin"
             android:text="Spread of virus Graph"
             android:textColor="@android:color/black"
             android:textSize="23sp"
@@ -219,20 +222,7 @@
             app:layout_constraintStart_toStartOf="@+id/linearLayout"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="8dp"
-            android:text="See details"
-            android:textColor="@color/colorPrimary"
-            app:layout_constraintBottom_toBottomOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toTopOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.6" />
+
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -245,7 +235,7 @@
             android:orientation="horizontal"
             android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView6"
+
             app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView5">
 

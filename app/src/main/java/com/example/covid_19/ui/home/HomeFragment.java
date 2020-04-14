@@ -1,11 +1,13 @@
 package com.example.covid_19.ui.home;
 
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -40,10 +42,14 @@ import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
 
-    private TextView tvTotalConfirmed, tvTotalDeaths, tvTotalRecovered, tvLastUpdated;
+    private TextView tvTotalConfirmed, tvTotalDeaths, tvTotalRecovered, tvLastUpdated,caseSeeDeatils;
     private ProgressBar progressBar;
-
+    TextView updateDate,totalCase,todayTotalCase,totalDeaths,todayTotaldeaths,recovered,criticalnum,activeNum,casesPerOneMillion,
+            deathsPerOneMillion,affectedCountries;
     PieChart pieChart;
+    Dialog dialog;
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -57,10 +63,27 @@ public class HomeFragment extends Fragment {
         tvTotalRecovered = root.findViewById(R.id.tvTotalRecovered);
         tvLastUpdated = root.findViewById(R.id.tvLastUpdated);
         progressBar = root.findViewById(R.id.progress_circular_home);
+        caseSeeDeatils = root.findViewById(R.id.caseSeeDeatilsId);
 
 
         pieChart=root.findViewById(R.id.pichartId);
 
+
+        dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(true);
+        dialog.setContentView(R.layout.see_sull_details_layout_dialog);
+                updateDate=dialog.findViewById(R.id.updateDateId);
+                totalCase=dialog.findViewById(R.id.totalCaseId);
+                todayTotalCase=dialog.findViewById(R.id.todayTotalCaseId);
+                totalDeaths=dialog.findViewById(R.id.totalDeathsId);
+                todayTotaldeaths=dialog.findViewById(R.id.todayTotaldeathsId);
+                recovered=dialog.findViewById(R.id.recoveredId);
+                criticalnum=dialog.findViewById(R.id.criticalnumId);
+                activeNum=dialog.findViewById(R.id.activeNumId);
+                casesPerOneMillion=dialog.findViewById(R.id.casesPerOneMillionId);
+                deathsPerOneMillion=dialog.findViewById(R.id.deathsPerOneMillionId);
+                affectedCountries=dialog.findViewById(R.id.affectedCountriesId);
 
         //call volley
         getData();
@@ -78,10 +101,17 @@ public class HomeFragment extends Fragment {
 
 
 
+        caseSeeDeatils.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDetails();
+            }
+        });
 
 
         return root;
     }
+
     private String getDate(long milliSecond)
     {
         // Mon, 23 Mar 2020 02:01:04 PM
@@ -91,6 +121,7 @@ public class HomeFragment extends Fragment {
         calendar.setTimeInMillis(milliSecond);
         return formatter.format(calendar.getTime());
     }
+
     private void getData() {
         RequestQueue queue= Volley.newRequestQueue(getActivity());
 
@@ -138,5 +169,53 @@ public class HomeFragment extends Fragment {
         });
 
         queue.add(stringRequest);
+    }
+
+    private void showDetails() {
+        RequestQueue queue= Volley.newRequestQueue(getActivity());
+
+        String url="https://corona.lmao.ninja/all";
+
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                progressBar.setVisibility(View.GONE);
+                try {
+                    JSONObject jsonObject = new JSONObject(response.toString());
+
+                    tvTotalConfirmed.setText(jsonObject.getString("cases"));
+                    tvTotalDeaths.setText(jsonObject.getString("deaths"));
+                    tvTotalRecovered.setText(jsonObject.getString("recovered"));
+                    tvLastUpdated.setText("Last Updated"+"\n"+getDate(jsonObject.getLong("updated")));
+
+
+                    updateDate.setText("Last Updated"+"\n"+getDate(jsonObject.getLong("updated")));
+                    totalCase.setText(jsonObject.getString("cases"));
+                    todayTotalCase.setText(jsonObject.getString("todayCases"));
+                    totalDeaths.setText(jsonObject.getString("deaths"));
+                    todayTotaldeaths.setText(jsonObject.getString("todayDeaths"));
+                    recovered.setText(jsonObject.getString("recovered"));
+                    criticalnum.setText(jsonObject.getString("critical"));
+                    activeNum.setText(jsonObject.getString("active"));
+                    casesPerOneMillion.setText(jsonObject.getString("casesPerOneMillion"));
+                    deathsPerOneMillion.setText(jsonObject.getString("deathsPerOneMillion"));
+                    affectedCountries.setText(jsonObject.getString("affectedCountries"));
+
+                    dialog.show();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                progressBar.setVisibility(View.GONE);
+                Log.d("Error Response", error.toString());
+            }
+        });
+
+        queue.add(stringRequest);
+
     }
 }

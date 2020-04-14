@@ -57,7 +57,7 @@ public class CheckCoronaFragment extends Fragment {
 
          resuktText= (TextView) dialog.findViewById(R.id.resuktTextId);
          warnningText= (TextView) dialog.findViewById(R.id.warnningTextId);
-        res= (TextView) dialog.findViewById(R.id.resId);
+         res= (TextView) dialog.findViewById(R.id.resId);
          warnningText.setVisibility(View.GONE);
 
 
@@ -253,8 +253,7 @@ public class CheckCoronaFragment extends Fragment {
             }
             else if (age>=18 && (gender.equals("Female")||gender.equals("Male")||gender.equals("Other")) && oldDeses.equals("No") && sympotms.equals("Yes") && fiver.equals("Yes"))
             {
-                Toast.makeText(getActivity(),"I think you will checkUp you body you are in denger jone",Toast.LENGTH_LONG).show();
-                resuktText.setText("I think you will checkUp you body you are in risk");
+                resuktText.setText("I think you will checkUp your body you are in risk");
                 resuktText.setTextColor(R.color.red);
                 warnningText.setText("Warnning: \nYou will need to contact, Your nearest health center");
                 warnningText.setVisibility(View.VISIBLE);
@@ -262,8 +261,7 @@ public class CheckCoronaFragment extends Fragment {
             }
             else if (age<= 18 && (gender.equals("Female")||gender.equals("Male")||gender.equals("Other")) && oldDeses.equals("No") && sympotms.equals("Yes") && fiver.equals("Yes"))
             {
-                Toast.makeText(getActivity(),"I think you will checkUp you body you are in denger jone",Toast.LENGTH_LONG).show();
-                resuktText.setText("I think you will checkUp you body you are in risk");
+                resuktText.setText("I think you will checkUp your body you are in risk");
                 resuktText.setTextColor(R.color.red);
                 warnningText.setText("Warnning: \nYou will need to contact, Your nearest health center");
                 warnningText.setVisibility(View.VISIBLE);
@@ -282,6 +280,23 @@ public class CheckCoronaFragment extends Fragment {
                 resuktText.setText("I think you are ok");
                 resuktText.setTextColor(R.color.red);
                 warnningText.setText("But dont go outside the home\n Stay At home Stay Safe");
+                warnningText.setVisibility(View.VISIBLE);
+                dialog.show();
+            }
+
+            else if (age>= 18 && (gender.equals("Female")||gender.equals("Male")||gender.equals("Other")) && oldDeses.equals("No") && sympotms.equals("No") && fiver.equals("Yes"))
+            {
+                resuktText.setText("I think you will checkUp your body you are in risk");
+                resuktText.setTextColor(R.color.red);
+                warnningText.setText("Warnning: \nYou will need to contact, Your nearest health center");
+                warnningText.setVisibility(View.VISIBLE);
+                dialog.show();
+            }
+            else if (age<= 18 && (gender.equals("Female")||gender.equals("Male")||gender.equals("Other")) && oldDeses.equals("No") && sympotms.equals("No") && fiver.equals("Yes"))
+            {
+                resuktText.setText("Your chance is very Low");
+                resuktText.setTextColor(R.color.red);
+                warnningText.setText("Warnning: \nYou will need to contact, Your nearest health center, and Stay home Stay Safe");
                 warnningText.setVisibility(View.VISIBLE);
                 dialog.show();
             }

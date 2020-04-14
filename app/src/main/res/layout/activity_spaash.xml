@@ -62,8 +62,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tech Hunter Corporation.(SIFAT)"
+            android:text="Devloper.(SIFAT)\nsifath847@gmail.com"
             android:textColor="@color/white"
+            android:textAlignment="center"
             android:textSize="16sp"
             android:layout_gravity="center"
             />

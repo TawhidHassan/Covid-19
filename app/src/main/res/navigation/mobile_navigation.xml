@@ -27,4 +27,10 @@
         android:name="com.example.covid_19.ui.CheckCoronaFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_check_corona" />
+    <fragment
+        android:id="@+id/navigation_call_center"
+        android:name="com.example.covid_19.HelpCenterFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_help_center" />
+
 </navigation>

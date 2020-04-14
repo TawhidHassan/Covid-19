@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FEFEFE"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:id="@+id/arcView2"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="70dp"
+            app:shape_arc_position="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/virus"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="8dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/help_center" />
+
+                    <TextView
+                        android:id="@+id/tvDetailCountryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-30dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:padding="8dp"
+                        android:text="Bangladesh Emergency Hotline"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <TextView
+            android:id="@+id/deatilText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/paytone_one"
+            android:text="All Number:"
+            android:textColor="@android:color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arcView2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/corner_radious"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/deatilText">
+
+            <TextView
+                android:id="@+id/nationLNumId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_call"
+                android:fontFamily="@font/aladin"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="National Center\n333"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/iedcr1id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_call"
+                android:fontFamily="@font/aladin"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="IIEDCR\n10655"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/iedcr2id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_call"
+                android:fontFamily="@font/aladin"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="IIEDCR\n01944333222"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/iedcr3id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_call"
+                android:fontFamily="@font/aladin"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="IIEDCR\n01937000011"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/iedcr4id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_call"
+                android:fontFamily="@font/aladin"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="IIEDCR\n01927711784"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

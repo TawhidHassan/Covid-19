@@ -34,17 +34,19 @@
                         android:layout_height="180dp"
                         android:padding="8dp"
                         android:src="@drawable/doctorteam" />
-                        <TextView
-                            android:id="@+id/tvDetailCountryName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Warning:\nLets check Your Corona status\n Firstly we like to infrom you that, this checkup give you a basic idea not 100% surety"
-                            android:layout_marginTop="-30dp"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailCountryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-30dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Warning:\nLets check Your Corona status\n Firstly we like to infrom you that, this checkup give you a basic idea not 100% surety"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                     </LinearLayout>
         </com.github.florent37.shapeofview.shapes.ArcView>
@@ -58,6 +60,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:fontFamily="@font/paytone_one"
             android:gravity="start"
             android:text="Answer all the questions in the check-up. Then you will be given a recommendation of what to do."
             android:textAlignment="viewStart"
@@ -89,9 +92,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/paytone_one"
                 android:text="Personal details."
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -167,17 +171,19 @@
             app:layout_constraintStart_toStartOf="parent"
             android:background="@drawable/corner_radious"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/paytone_one"
                 android:text="Do you have one of the following pre-existing conditions?
 
  ?"
-                android:layout_marginTop="8dp"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -225,11 +231,12 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do you have one or more symptoms of acute respiratory disease?* \nAnd/or have you suddenly lost the sense of smell and/or taste?"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/paytone_one"
+                android:text="Do you have one or more symptoms of acute respiratory disease?* \nAnd/or have you suddenly lost the sense of smell and/or taste?"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
@@ -277,10 +284,11 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do you currently have a fever, a feverish feeling or muscle pain? Or have you had one or more of these symptoms in the last 24 hours?"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/paytone_one"
+                android:text="Do you currently have a fever, a feverish feeling or muscle pain? Or have you had one or more of these symptoms in the last 24 hours?"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <RadioGroup

@@ -37,8 +37,10 @@ public class DashboardFragment extends Fragment {
         symptompsModels.add(new SymptompsModel(R.drawable.headache,"Headache"));
         symptompsModels.add(new SymptompsModel(R.drawable.caugh,"Cough"));
         symptompsModels.add(new SymptompsModel(R.drawable.fever,"Fever"));
-        symptompsModels.add(new SymptompsModel(R.drawable.fever,"Fever"));
-        symptompsModels.add(new SymptompsModel(R.drawable.fever,"Fever"));
+        symptompsModels.add(new SymptompsModel(R.drawable.high_fiver,"High Fever"));
+        symptompsModels.add(new SymptompsModel(R.drawable.caugh,"diarrhea"));
+        symptompsModels.add(new SymptompsModel(R.drawable.nasal,"Nasal Congestion"));
+        symptompsModels.add(new SymptompsModel(R.drawable.fever,"pains"));
 
         SymptompsAdapter symptompsAdapter=new SymptompsAdapter(symptompsModels);
         sympotmsRecyclerView.setAdapter(symptompsAdapter);
